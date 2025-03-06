@@ -1,0 +1,16 @@
+:root{
+    --light-mode-bg:#FFFEEC;
+    --dark-mode-bg: #222223;
+    --lavender:#BCB4FF;
+    --gold-green:#CAC426;
+}
+
+body{
+    font-family: "Archivo", sans-serif;
+    background-color: var(--dark-mode-bg);
+}
+
+h1{
+    color: var(--lavender);
+}
+
