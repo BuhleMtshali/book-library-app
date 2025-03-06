@@ -27,9 +27,33 @@ body{
     margin-top: 40px;
     height: 90vh;
 }
+
+/* scrollbar  */
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #222223; /* Dark mode background */
+    border-radius: 10px;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: var(--lavender); /* Gold green handle */
+    border-radius: 10px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-green); /* Lavender on hover */
+}
+
+
  
 /* nav styles */
-
 .nav-grid {
     grid-row: span 5 / span 5;
     background-color: var(--dark-mode-bg);
@@ -93,9 +117,18 @@ body{
     color: var(--light-mode-bg);
 }
 
+hr{
+    background-color: var(--gold-green);
+    color: var(--gold-green);
+    height: 1px;
+    border: none;
+    max-width: 100%;
+}
+
 .active-nav{
     color: var(--gold-green);
     font-weight: 700;
+    background-color: #BCB4FF;
 }
 
 /* main grid  */
