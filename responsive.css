@@ -16,7 +16,7 @@
     .nav-grid{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         padding: 20px 0;
         border-radius: 25px;
@@ -47,7 +47,7 @@
     .nav-grid{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
      }
 
