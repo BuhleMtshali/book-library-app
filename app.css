@@ -339,6 +339,7 @@ hr{
 .right-mid-main{
     flex: 2;
     padding-right: 5px;
+   
 }
 
 .left-mid-main{
@@ -374,4 +375,45 @@ hr{
 .recommended-heading button:hover{
     background-color: var(--light-mode-bg);
     color: var(--lavender);
+}
+
+.categories-div{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 10px 0;
+}
+
+.book:nth-child(1){
+    background-color: #BCB4FF;
+}
+
+.book:nth-child(2){
+   background-color: #CAC426;
+}
+
+.book:nth-child(3){
+    background-color: cadetblue;
+}
+
+.book:nth-child(4){
+    background-color: crimson;
+}
+
+.book .img-cover{
+    width: 150px;
+    height: 150px;
+}
+
+.book .img-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-fit: cover;
 }

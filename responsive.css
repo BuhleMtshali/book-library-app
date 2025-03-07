@@ -87,6 +87,10 @@
        align-items: center;
        justify-content: center;
     }
+
+    .left-mid-main{
+        display: none;
+    }
 }
 
 /* xs */
@@ -117,12 +121,21 @@
         padding: 10px;
     }
 
-
+    .right-wrapper i{
+        margin: 0;
+    }
 
     .right-wrapper {
         display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .left-mid-main{
+        display: none;
+    }
+    .categories-div{
+        padding-top: 20px;
     }
 }
