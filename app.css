@@ -542,3 +542,13 @@ hr{
     font-size: 1.3rem;
     font-weight: 600;
 }
+
+.book-info p:nth-child(1){
+    border-right: 2px solid var(--lemon-lime);
+   padding-right: 25px;
+}
+
+.book-info p:nth-child(2){
+    border-right: 2px solid var(--lemon-lime);
+   padding-right: 25px;
+}

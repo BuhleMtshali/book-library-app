@@ -7,7 +7,8 @@ let navElements = document.querySelectorAll('.nav-wrapper');
             // Add 'active-nav' to the clicked element
             nav.classList.add('active-nav');
     })
-})
+});
+
 
 //toggling dark mode
 const toggleBtn = document.querySelector('.dark-icon');
@@ -23,4 +24,20 @@ themeWrapper.addEventListener('click', () => {
     } else {
         themeWrapper.innerHTML = `<i class="fa-regular fa-moon dark-icon"></i>`
     }
+})
+
+//toggligling the styles for the star ratings
+const starRatings = document.querySelectorAll('.fa-star');
+starRatings.forEach((star,index) => {
+    star.addEventListener('click', () => {
+       starRatings.forEach((s, i) => {
+        if(i <= index){
+            s.classList.remove('fa-regular');
+            s.classList.add('fa-solid');
+        }  else {
+            s.classList.remove('fa-solid');
+            s.classList.add('fa-regular')
+        }
+       })
+    })
 })
