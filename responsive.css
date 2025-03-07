@@ -112,4 +112,17 @@
        align-items: center;
        justify-content: center;
     }
+
+    .main-grid{
+        padding: 10px;
+    }
+
+
+
+    .right-wrapper {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    }
 }
