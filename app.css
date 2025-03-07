@@ -3,10 +3,14 @@
     --dark-mode-bg: #222223;
     --lavender:#BCB4FF;
     --gold-green:#CAC426;
+    --dark-green: #203627;
+    --lemon-lime: #E8FF40;
+    --PINK:#E23A48;
 }
 
 *{
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 *:focus{
@@ -117,6 +121,13 @@ body{
     background-color: var(--dark-mode-bg);
 }
 
+.container.light-mode .left-mid-main{
+    background-color: var(--gold-green);
+}
+
+.container.light-mode .rating i{
+    color: var(--dark-mode-bg);
+}
 /* END OF LIGHT MODE STYLES */
 
 /* scrollbar  */
@@ -349,28 +360,18 @@ hr{
 }
 
 /* bottom main div */
-.middle-main{
-    display: flex;
+.middle-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     width: 100%;
-    padding-top: 20px;
-    height: 100vh;
-    /* gap: 10px; */
-    margin-top: 60px;
-    position: relative;
+    height: calc(100vh - 60px);
+    margin-top: 60px; 
 }
 
-.right-mid-main{
-    flex: 2;
+.right-mid-main {
+    height: 100%;
+    overflow-y: auto; /* Enables scrolling */
     padding-right: 5px;
-   overflow-y: auto;
-}
-
-.left-mid-main{
-    background-color: chocolate;
-    flex: 1;
-    overflow: hidden;
-    /* position: fixed;
-    margin-left: 742px; */
 }
 
 .recommended-heading{
@@ -384,6 +385,7 @@ hr{
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--lavender);
+    margin-bottom: 20px;
 }
 
 .recommended-heading button{
@@ -455,5 +457,88 @@ hr{
 }
 
 .genres-container{
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+
+
+.left-mid-main{
+    background-color: var(--lavender);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    place-items: center;
+    overflow: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.inner-wrapper{
+    position: relative;
+    top: -80px;
+    /* margin-top: 150px; */
+    position: relative;
+    top: 53px;
+}
+.preview-img-wrapper{
+    width: 300px;
+    height: 430px;
+}
+
+.preview-img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.preview-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.preview-text .book-name{
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--dark-green);
+    padding: 6px 0;
+}
+
+.preview-text .book-author{
+    color: var(--light-mode-bg);
+    font-size: 1.5rem;
+    padding-bottom: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.book-info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.rating i{
+    color: var(--lemon-lime);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.book-info{
+    margin-top: 10px;
+}
+
+.book-info p{
+    color: var(--PINK);
+    font-size: 1.3rem;
+    font-weight: 600;
 }
