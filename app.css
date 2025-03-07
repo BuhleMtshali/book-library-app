@@ -31,7 +31,7 @@ body{
     margin-top: 40px;
     height: 90vh;
     border-radius: 20px;
-    
+    position: relative;
 }
 
 /* light mode  Styles*/
@@ -42,6 +42,10 @@ body{
 
 .container.light-mode .right-wrapper i:hover{
     color: var(--light-mode-bg)!important;
+}
+
+.container.light-mode .top-searchbar{
+    background-color: var(--light-mode-bg);
 }
 
 .container.light-mode .nav-wrapper p,
@@ -107,6 +111,10 @@ body{
 .container.light-mode .recommended-heading button:hover{
     background-color: var(--lavender);
     color: var(--light-mode-bg);
+}
+
+.container.light-mode .book:hover{
+    background-color: var(--dark-mode-bg);
 }
 
 /* END OF LIGHT MODE STYLES */
@@ -236,9 +244,17 @@ hr{
 /* searchbar */
 .top-searchbar{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+    position: fixed;
+    max-width: 1110px;
     width: 100%;
+    margin-top: 40px;
+    top: 0px;
+    z-index: 100;
+    background-color:#353535;
+   padding: 10px 0;
+  
 }
 
 .left-search-wrapper{
@@ -248,6 +264,8 @@ hr{
     border-radius: 20px;
     gap: 8px;
     border: 2px solid var(--gold-green);
+    max-width: 250px;
+    
 }
 
 .left-search-wrapper i{
@@ -255,11 +273,12 @@ hr{
     font-size: 1.2rem;
 }
 
+
+
 .left-search-wrapper input{
     background: none;
     border: none;
     width: 100%;
-    max-width: 250px;
     font-size: 1.2rem;
     color: var(--light-mode-bg);
 }
@@ -334,17 +353,24 @@ hr{
     display: flex;
     width: 100%;
     padding-top: 20px;
+    height: 100vh;
+    /* gap: 10px; */
+    margin-top: 60px;
+    position: relative;
 }
 
 .right-mid-main{
     flex: 2;
     padding-right: 5px;
-   
+   overflow-y: auto;
 }
 
 .left-mid-main{
     background-color: chocolate;
     flex: 1;
+    overflow: hidden;
+    /* position: fixed;
+    margin-left: 742px; */
 }
 
 .recommended-heading{
@@ -387,28 +413,20 @@ hr{
     display: flex;
     flex-direction: column;
     place-items: center;
-    padding: 10px 0;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.book:nth-child(1){
-    background-color: #BCB4FF;
-}
-
-.book:nth-child(2){
-   background-color: #CAC426;
-}
-
-.book:nth-child(3){
-    background-color: cadetblue;
-}
-
-.book:nth-child(4){
-    background-color: crimson;
+.book:hover{
+    background-color: var(--light-mode-bg);
+    transform: scale(0.9);
 }
 
 .book .img-cover{
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 190px;
+    margin-bottom: 10px;
 }
 
 .book .img-cover img{
@@ -416,4 +434,26 @@ hr{
     height: 100%;
     object-fit: cover;
     object-fit: cover;
+}
+
+.book .book-name{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--lavender);
+}
+
+.book .book-author{
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--gold-green);
+    text-align: center;
+}
+
+.recommended-heading button i{
+    padding: 2px 10px;
+}
+
+.genres-container{
+    margin-top: 30px;
 }
