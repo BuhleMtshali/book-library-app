@@ -41,3 +41,29 @@ starRatings.forEach((star,index) => {
        })
     })
 })
+
+//toggling closing and opening the modal
+const modalWindow = document.getElementById('modal-window');
+const modalOverlay = document.querySelector('.overlay');
+const closeModal = document.querySelectorAll('.close-modal');
+const bookElement = document.querySelectorAll('.book');
+
+//event listeners
+closeModal.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', closeWindow)
+});
+
+bookElement.forEach((book) => {
+    book.addEventListener('click', openWindow)
+})
+
+//opening the modal with the bookelement
+function openWindow(){
+    modalWindow.classList.remove('hide-modal');
+    modalOverlay.classList.remove('hide-modal');
+}
+
+function closeWindow () {
+    modalWindow.classList.add('hide-modal');
+    modalOverlay.classList.add('hide-modal')
+}
