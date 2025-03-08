@@ -40,6 +40,15 @@
     .left-mid-main{
         display: none;
     }
+    .middle-main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .right-mid-main{
+        width: 100%;
+    }
 }
 
 /* md */
@@ -69,7 +78,15 @@
     .left-mid-main{
         display: none;
     }
+    .middle-main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 
+    .right-mid-main{
+        width: 100%;
+    }
 }
 
 /* sm */
@@ -97,20 +114,37 @@
     }
 
     .main-grid p{
-        text-align: center;
         margin: 0;
+    }
+
+    .middle-main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .right-mid-main{
+        width: 100%;
+    }
+
+    .categories-div{
+        padding-top: 10px;
+    }
+
+    .book .img-cover{
+        width: 200px;
+        height: 300px;
+    }
+
+    .left-mid-main{
+        display: none;
     }
 
     .book{
         padding: 15px 0;
     }
 
-    .left-mid-main{
-        display: none;
-    }
-    .categories-div{
-        padding-top: 10px;
-    }
+    
 }
 
 /* xs */
@@ -146,6 +180,20 @@
         padding: 20px 10px;
         text-align: center;
         overflow-x: hidden;
+        
+    }
+
+    .middle-main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .right-mid-main{
+        padding: 0;
+    }
+
+    .left-mid-main{
+        display: none;
     }
 
     .main-grid p{
@@ -174,9 +222,7 @@
         height: 290px;
     }
 
-    .left-mid-main{
-        display: none;
-    }
+    
     .categories-div{
         padding-top: 10px;
     }
