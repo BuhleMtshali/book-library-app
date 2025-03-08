@@ -11,14 +11,15 @@
 *{
     margin: 0;
     scroll-behavior: smooth;
+    font-family: "Englebert", cursive;
 }
 
 *:focus{
     outline: none;
+    
 }
 
 body{
-    font-family: "Englebert", cursive;
     background-color: #353535;
 
 }
@@ -131,6 +132,17 @@ body{
 
 .container.light-mode .modal-div{
     background-color: var(--gold-green);
+}
+
+.container.light-mode .bottom-genre button{
+    background-color: var(--lavender);
+    color: var(--light-mode-bg);
+}
+
+.container.light-mode .bottom-genre button:hover{
+    background-color: var(--light-mode-bg);
+    border: 1px solid var(--gold-green);
+    color: var(--gold-green);
 }
 /* END OF LIGHT MODE STYLES */
 
@@ -464,20 +476,36 @@ hr{
     margin-top: 50px;
 }
 
-
-
-/* .left-mid-main{
-    background-color: var(--lavender);
-    flex: 1;
+.bottom-genre{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    overflow: auto;
-    height: 100vh;
-    position: relative;
+   justify-content: space-around;
+   transition: all 0.3s ease-in-out;
+   max-width: 100%;
+}
+
+.hide-genre{
     display: none;
-} */
+   
+}
+
+.bottom-genre button{
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    background-color: var(--gold-green);
+    color: var(--light-mode-bg);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottom-genre button:hover{
+    background-color: var(--light-mode-bg);
+    border: 1px solid var(--lavender);
+    color: var(--lavender);
+}
 
 .inner-wrapper{
     position: relative;

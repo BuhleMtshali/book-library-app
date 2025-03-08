@@ -67,3 +67,17 @@ function closeWindow () {
     modalWindow.classList.add('hide-modal');
     modalOverlay.classList.add('hide-modal')
 }
+
+//closing the modal when i click on the body
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !modalWindow.classList.contains('hide-modal')){
+        closeWindow()
+    }
+})
+
+//toggling the genre element
+const genreContainer = document.querySelector('.bottom-genre');
+const filterGenrebtn = document.querySelector('.filter-btn');
+filterGenrebtn.addEventListener('click', () => {
+    genreContainer.classList.toggle('hide-genre')
+})

@@ -49,6 +49,13 @@
     .right-mid-main{
         width: 100%;
     }
+
+    .bottom-genre{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin: 5px;
+    }
 }
 
 /* md */
@@ -86,6 +93,13 @@
 
     .right-mid-main{
         width: 100%;
+    }
+
+    .bottom-genre{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin: 5px;
     }
 }
 
@@ -142,6 +156,13 @@
 
     .book{
         padding: 15px 0;
+    }
+
+    .bottom-genre{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 15px;
     }
 
     
@@ -225,5 +246,12 @@
     
     .categories-div{
         padding-top: 10px;
+    }
+
+    .bottom-genre{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
     }
 }
