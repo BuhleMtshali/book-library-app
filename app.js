@@ -9,6 +9,22 @@ let navElements = document.querySelectorAll('.nav-wrapper');
     })
 });
 
+//adding an active class to the genre buttons
+let genreButtons = document.querySelectorAll('.btn-genre');
+genreButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        genreButtons.forEach((element) => element.classList.remove('active-genre'));
+        btn.classList.add('active-genre');
+        console.log(btn.value)
+    })
+})
+
+//toggling the genre element
+const genreContainer = document.querySelector('.bottom-genre')
+const filterGenrebtn = document.querySelector('.filter-btn');
+filterGenrebtn.addEventListener('click', () => {
+    genreContainer.classList.toggle('hide-genre')
+})
 
 //toggling dark mode
 const toggleBtn = document.querySelector('.dark-icon');
@@ -75,9 +91,3 @@ document.addEventListener('keydown', function(e){
     }
 })
 
-//toggling the genre element
-const genreContainer = document.querySelector('.bottom-genre');
-const filterGenrebtn = document.querySelector('.filter-btn');
-filterGenrebtn.addEventListener('click', () => {
-    genreContainer.classList.toggle('hide-genre')
-})

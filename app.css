@@ -144,6 +144,11 @@ body{
     border: 1px solid var(--gold-green);
     color: var(--gold-green);
 }
+
+.container.light-mode .active-genre{
+    background-color: var(--gold-green) !important;
+    color: var(--light-mode-bg);
+}
 /* END OF LIGHT MODE STYLES */
 
 /* scrollbar  */
@@ -505,6 +510,11 @@ hr{
     background-color: var(--light-mode-bg);
     border: 1px solid var(--lavender);
     color: var(--lavender);
+}
+
+.active-genre{
+    background-color: var(--lavender) !important;
+    color: var(--light-mode-bg);
 }
 
 .inner-wrapper{
